@@ -7,7 +7,7 @@
 
   su 0 cmd location providers add-test-provider gps
   su 0 cmd location providers set-test-provider-enabled gps true
-  su 0 cmd location providers set-test-provider-location gps --location 22.683778,114.202625 --accuracy 5
+  su 0 cmd location providers set-test-provider-location gps --location <纬度>,<经度> --accuracy 5
 
 设备脚本 run_route.sh 会逐行读 route_samples.txt，每 0.95 秒把 gps/network 两个
 provider 都设到下一个坐标点，实现"沿路线跑"。start_route.sh 用 setsid 启动它。
@@ -24,11 +24,12 @@ MOCK_LOCATION 等字符串），系统 Test Provider 给的位置带 mock 标记
 
 文件说明
 --------
-route_samples.txt  5400 个采样点（13 点闭环，362.2 米，3 m/s，约 90 分钟），每行 lat,lon,accuracy
+route_samples.txt  5400 个采样点（每行 lat,lon,accuracy）——**已从公开仓库移除**
+                   （含完整轨迹，会暴露具体地点；需要时按主指南第 7 节的路线自己插值生成）
 run_route.sh       设备端播放器（读 /data/local/tmp/route_samples.txt）
 start_route.sh     启动器（setsid 后台运行，避免 adb shell 退出时被杀）
 
-如果想再试：
+如果想再试（先自己生成 route_samples.txt，每行 `<纬度>,<经度>,<精度>`，间隔 ~0.95 秒一个点）：
   adb push route_samples.txt /data/local/tmp/
   adb push run_route.sh /data/local/tmp/
   adb push start_route.sh /data/local/tmp/
