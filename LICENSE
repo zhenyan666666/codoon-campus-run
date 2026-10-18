@@ -19,12 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-第三方组件说明 / Third-party components
----------------------------------------
-- frida (https://frida.re) — wxWindows Library Licence (LGPL 2.1 with static
-  linking exception)。本仓库不包含 frida 二进制，由 scripts/下载依赖.py 从官方
-  Release 下载；重新分发时请保留其许可与版权声明。
-- frida-server 由 frida 官方发布，未修改。
