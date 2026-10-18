@@ -84,3 +84,9 @@
 ## 免责
 
 代码按「现状」提供，不保证咕咚后续版本仍可用；因使用造成的账号、成绩或校纪问题与作者无关。
+
+## License
+
+[MIT](LICENSE) © 2026 zhenyan666666
+
+仓库本身不含 frida 二进制；`scripts/下载依赖.py` 会从 frida 官方 Release 下载（wxWindows Library Licence / LGPL 2.1 + 静态链接例外），重新分发请保留其版权声明。
