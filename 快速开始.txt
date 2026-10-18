@@ -20,5 +20,7 @@
   暂停 → 结束 → 保存。想核对记录：双击 查看记录.bat
 
 想改路线/速度：scripts\hook5.js 里的 V 数组和 SPEED，改完关掉重开 启动.bat。
+  ★ 换自己学校那圈：先去 https://lbs.amap.com/tools/picker 取点（高德坐标 GCJ-02），
+    用百度/Google 的坐标会偏 300~600 米。详细步骤见 使用指南.md 第 7 节。
 
 详见 使用指南.md
