@@ -1,0 +1,12 @@
+# 二进制 / 缓存，不入库（用 scripts/下载依赖.py 获取）
+python/pylibs/
+device/frida-server16
+*.whl
+*.xz
+
+# python
+__pycache__/
+*.pyc
+
+# 本地打包产物
+*.zip
